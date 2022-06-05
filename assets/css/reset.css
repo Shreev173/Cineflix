@@ -64,7 +64,7 @@ a {
 
 ::-webkit-scrollbar {
   background: transparent;
-  border-left: 1px solid var(--oxford-blue);
+  border-left: 15px solid var(--oxford-blue);
 }
 
 ::-webkit-scrollbar-thumb {
