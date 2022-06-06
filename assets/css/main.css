@@ -8,8 +8,15 @@ nav {
 
 .navbar,
 .banner,
-.movies {
+.movies,
+.category {
   padding: 0 var(--px);
+}
+
+.section-heading {
+  font-size: var(--section-heading);
+  font-weight: var(--fw-5);
+  margin-bottom: 60px;
 }
 
 .container {
@@ -367,4 +374,75 @@ input ~ .checked-radio-bg {
 
 .movies-card .genre {
   margin-right: 8px;
+}
+
+.load {
+  background: var(--oxford-blue);
+  display: block;
+  padding: 20px 50px;
+  margin: auto;
+  border-radius: 15px;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-5);
+  color: var(--white);
+}
+
+.load:hover {
+  background: var(--light-azure);
+}
+
+/* Category*/
+
+.category {
+  margin-bottom: 60px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.category-card {
+  position: relative;
+  height: 150px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.category-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 20%, #000a);
+}
+
+.category-card:hover .card-img {
+  transform: scale(1.1);
+}
+
+.category-card .name,
+.category-card .total {
+  position: absolute;
+  bottom: 20px;
+  color: var(--white);
+  z-index: 20;
+}
+
+.category-card .name {
+  left: 20px;
+  font-size: 20px;
+}
+
+.category-card .total {
+  right: 20px;
+  font-size: 18px;
+  background: var(--oxford-blue-50);
+  padding: 5px 8px;
+  border-radius: 8px;
+}
+
+.category-card .name:hover {
+  color: var(--light-azure);
 }
